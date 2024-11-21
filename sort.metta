@@ -17,7 +17,5 @@
 (= ( helper (:: $h $t) $min)
     (if (< $h $min) (helper $t $h) (helper $t $min)))
 
-(= (sort $f (:: $h $t) $A)
-    (:: (findMin) )
-)
- ;;(:: 1 (:: 2 ()))
+(= (sort (:: $h $t))
+    (:: (findMin (:: $h $t)) (sort (remove (:: $h $t) (findMin $h $t)))))
