@@ -17,5 +17,17 @@
 (= ( helper (:: $h $t) $min)
     (if (< $h $min) (helper $t $h) (helper $t $min)))
 
-(= (sort (:: $h $t))
-    (:: (findMin (:: $h $t)) (sort (remove (:: $h $t) (findMin $h $t)))))
+
+(= (sorts ()) ())
+(= (sorts (:: $h $t))
+    (let* (
+            ($min (findMin (:: $h $t)))
+            ($removedList (remove (:: $h $t) $min))
+        )
+    (let () (println! ($removedList))
+        (:: $min (sorts $removedList))
+    )
+)
+)
+! (sorts (:: 12 (:: 34 (:: 1 (:: 13 (:: 1 ()))))))
+
