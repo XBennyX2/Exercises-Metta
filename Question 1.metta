@@ -7,8 +7,7 @@
 (Mentor Leah Kal)
 (Mentor Betty Aron)
 
-(= (isMember ()) False)
-(= (isMember $x) (match &self (Mentor $y $x) or (Mentor $x $y) True False))
+
 
  ; constraints as rules
 (= (get-Mentor $intern) (match &self (Mentor $mentor $intern) $mentor))
