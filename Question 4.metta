@@ -1,5 +1,4 @@
-;. Write a Prolog program to count the elements in a list (a list within the
-;list counts as one element)
+;. Write a Prolog program to count the elements in a list 
 
 (: count_elements (->(List $t) Number))
 ; an empty list returns 0
